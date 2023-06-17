@@ -7,7 +7,6 @@ export default function Navbar() {
         <a href="#Your Budget Manager" className="navbar-brand">
           Your Budget Manager
         </a>
-
         <ul className="navbar-nav">
           <li className="nav-item">
             <a href="#Home" className="nav-link active">
