@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./component/Navbar";
 import Budget from "./component/Budget";
 import Remaining from "./component/Remaining";
+import Spent from "./component/Spent"
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           </div>
           <div className="row-sm">
             <Remaining />
+          </div>
+          <div className="row-sm">
+            <Spent />
           </div>
         </div>
     </div>
