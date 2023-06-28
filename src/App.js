@@ -41,6 +41,10 @@ function App() {
     setBudget(newBudget);
   };
 
+  const handleAddExpense = (newExpense) => {
+    setExpenses([...expenses, newExpense])
+  }
+
   return (
     <Router>
       <div className="container">
@@ -60,7 +64,9 @@ function App() {
         <div className="row mt-3">
           <div className="col-sm">
             <Switch>
-              <Route path="/add-expense" component={AddExpenseForm} />
+              <Route path="/add-expense">
+               <AddExpenseForm onAddExpense={handleAddExpense}/>
+               </Route> 
               <Route path="/">
                 <ExpenseList expenses={expenses} />
               </Route>

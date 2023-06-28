@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {v4 as uuidv4} from "uuid"
 
-export default function AddExpenseForm() {
+export default function AddExpenseForm({ onAddExpense }) {
     const [title, setTitle] = useState("")
     const [cost, setCost] = useState("")
 
@@ -34,7 +34,7 @@ export default function AddExpenseForm() {
             // reset the form fields
             setTitle("")
             setCost("")
-            
+            onAddExpense(data)
         })
         .catch(error => console.log(error))
     }
