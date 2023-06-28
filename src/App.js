@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import Navbar from "./component/Navbar";
 import Budget from "./component/Budget";
 import Remaining from "./component/Remaining";
 import Spent from "./component/Spent";
 import ExpenseList from "./component/ExpenseList";
+import AddExpenseForm from "./component/AddExpenseForm";
 
 function App() {
   const [budget, setBudget] = useState(0);
@@ -26,36 +30,45 @@ function App() {
   }, []);
 
   // calculate total spent
-  const totalExpenses = expenses.map((expense) => expense.cost).reduce((total, cost) => total + cost, 0)
+  const totalExpenses = expenses
+    .map((expense) => expense.cost)
+    .reduce((total, cost) => total + cost, 0);
 
   // calculate the remaining balance
-  const remainingBalance = budget - totalExpenses
+  const remainingBalance = budget - totalExpenses;
 
   const handleUpdateBudget = (newBudget) => {
-    setBudget(newBudget)
-  }
+    setBudget(newBudget);
+  };
 
   return (
-    <div className="container">
-      <Navbar />
-      <div className="row mt-4">
-        <div className="col-sm">
-          <Budget budget={budget} onUpdateBudget={handleUpdateBudget}/>
+    <Router>
+      <div className="container">
+        <Navbar />
+        <div className="row mt-4">
+          <div className="col-sm">
+            <Budget budget={budget} onUpdateBudget={handleUpdateBudget} />
+          </div>
+          <div className="col-sm">
+            <Remaining remainingBalance={remainingBalance} />
+          </div>
+          <div className="col-sm">
+            <Spent totalExpenses={totalExpenses} />
+          </div>
         </div>
-        <div className="col-sm">
-          <Remaining remainingBalance={remainingBalance}/>
-        </div>
-        <div className="col-sm">
-          <Spent totalExpenses={totalExpenses}/>
+        <h3 className="mt-4">Expenses</h3>
+        <div className="row mt-3">
+          <div className="col-sm">
+            <Switch>
+              <Route path="/add-expense" component={AddExpenseForm} />
+              <Route path="/">
+                <ExpenseList expenses={expenses} />
+              </Route>
+            </Switch>
+          </div>
         </div>
       </div>
-      <h3 className="mt-4">Expenses</h3>
-      <div className="row mt-3">
-        <div className="col-sm">
-          <ExpenseList expenses={expenses} />
-        </div>
-      </div>
-    </div>
+    </Router>
   );
 }
 

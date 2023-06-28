@@ -5,9 +5,9 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar md navbar-dark bg-dark">
       <div className="container">
-        <a href="#Your Budget Manager" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           Your Budget Manager
-        </a>
+        </Link>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link to="/" className="nav-link active">
