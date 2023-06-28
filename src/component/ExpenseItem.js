@@ -7,7 +7,7 @@ export default function ExpenseItem({ id, title, cost, onDeleteExpense }) {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then((data) => onDeleteExpense(data.id));
+      .then((expense) => onDeleteExpense(expense.id));
   };
 
   return (
@@ -15,7 +15,7 @@ export default function ExpenseItem({ id, title, cost, onDeleteExpense }) {
       {title}
       <div>
         <span className="badge rounded-pill bg-primary mr-3">${cost}</span>
-        <AiTwotoneDelete
+        <AiTwotoneDelete 
           size="1.5em"
           onClick={handleDeleteClick}
         ></AiTwotoneDelete>
