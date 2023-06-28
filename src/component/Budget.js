@@ -5,8 +5,8 @@ export default function Budget({ budget, onUpdateBudget }) {
   const [newBudget, setNewBudget] = useState(budget);
 
   const handleNewBudget = (e) => {
-    setNewBudget(parseFloat(e.target.value))
-  }
+    setNewBudget(parseFloat(e.target.value));
+  };
 
   const handleEditClick = () => {
     setEditting(true);
@@ -18,21 +18,21 @@ export default function Budget({ budget, onUpdateBudget }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({total: newBudget}),
+      body: JSON.stringify({ total: newBudget }),
     })
-    .then(() => {
-      setEditting(false)
-      onUpdateBudget(newBudget)
-    })
-    .catch((errror) => {
-      console.log("Error updating budget:", budget)
-    })
+      .then(() => {
+        setEditting(false);
+        onUpdateBudget(newBudget);
+      })
+      .catch((errror) => {
+        console.log("Error updating budget:", budget);
+      });
   };
 
   const handleCancelClick = () => {
-    setEditting(false)
-    setNewBudget(budget)
-  }
+    setEditting(false);
+    setNewBudget(budget);
+  };
 
   return (
     <div className="alert alert-info d-flex justify-content-between align-items-center">

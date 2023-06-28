@@ -37,18 +37,22 @@ function App() {
   // calculate the remaining balance
   const remainingBalance = budget - totalExpenses;
 
+  
+
   const handleUpdateBudget = (newBudget) => {
     setBudget(newBudget);
   };
 
   const handleAddExpense = (newExpense) => {
-    setExpenses([...expenses, newExpense])
-  }
+    setExpenses([...expenses, newExpense]);
+  };
 
   const handleDeleteExpense = (expenseId) => {
-    const updateExpenseList = expenses.filter((expense) => expense.id !== expenseId)
-    setExpenses(updateExpenseList)
-  }
+    const updateExpenseList = expenses.filter(
+      (expense) => expense.id !== expenseId
+    );
+    setExpenses(updateExpenseList);
+  };
 
   return (
     <Router>
@@ -70,10 +74,13 @@ function App() {
           <div className="col-sm">
             <Switch>
               <Route path="/add-expense">
-               <AddExpenseForm onAddExpense={handleAddExpense}/>
-               </Route> 
+                <AddExpenseForm onAddExpense={handleAddExpense} />
+              </Route>
               <Route path="/">
-                <ExpenseList expenses={expenses} onDeleteExpense = {handleDeleteExpense}/>
+                <ExpenseList
+                  expenses={expenses}
+                  onDeleteExpense={handleDeleteExpense}
+                />
               </Route>
             </Switch>
           </div>
