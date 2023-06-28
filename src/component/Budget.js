@@ -4,12 +4,16 @@ export default function Budget({ budget, onUpdateBudget }) {
   const [editing, setEditting] = useState(false);
   const [newBudget, setNewBudget] = useState(budget);
 
+  const handleNewBudget = (e) => {
+    setNewBudget(parseFloat(e.target.value))
+  }
+
   const handleEditClick = () => {
     setEditting(true);
   };
 
   const handleSaveClick = () => {
-    fetch("http://localhost:3001/budget", {
+    fetch("http://localhost:3000/budget", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +42,7 @@ export default function Budget({ budget, onUpdateBudget }) {
             type="number"
             className="form-control mr-2"
             value={newBudget}
-            onChange={(e) => setNewBudget(parseInt(e.target.value))}
+            onChange={handleNewBudget}
           />
           <button
             type="button"

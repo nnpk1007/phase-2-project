@@ -43,7 +43,7 @@ export default function AddExpenseForm({ onAddExpense }) {
     <form onSubmit={handleSubmit}>
       <div className="row">
         <div className="col-sm">
-          <label for="title>">Title</label>
+          <label>Title</label>
           <input
             required="required"
             type="text"
@@ -54,7 +54,7 @@ export default function AddExpenseForm({ onAddExpense }) {
           ></input>
         </div>
         <div className="col-sm">
-          <label for="cost">Cost</label>
+          <label>Cost</label>
           <input
             required="required"
             type="text"
@@ -64,12 +64,12 @@ export default function AddExpenseForm({ onAddExpense }) {
             onChange={handleCostChange}
           ></input>
         </div>
+      </div>
         <div className="col-sm">
-            <button type="submit" className="btn btn-primary btn-sm">
+            <button type="submit" className="mt-3 btn btn-primary btn-sm">
                 Save
             </button>
         </div>
-      </div>
     </form>
   );
 }

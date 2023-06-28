@@ -27,7 +27,7 @@ function App() {
       .then((r) => r.json())
       .then((data) => setExpenses(data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [expenses]);
 
   // calculate total spent
   const totalExpenses = expenses
@@ -43,6 +43,11 @@ function App() {
 
   const handleAddExpense = (newExpense) => {
     setExpenses([...expenses, newExpense])
+  }
+
+  const handleDeleteExpense = (expenseId) => {
+    const updateExpenseList = expenses.filter((expense) => expense.id !== expenseId)
+    setExpenses(updateExpenseList)
   }
 
   return (
@@ -68,7 +73,7 @@ function App() {
                <AddExpenseForm onAddExpense={handleAddExpense}/>
                </Route> 
               <Route path="/">
-                <ExpenseList expenses={expenses} />
+                <ExpenseList expenses={expenses} onDeleteExpense = {handleDeleteExpense}/>
               </Route>
             </Switch>
           </div>
