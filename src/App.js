@@ -12,14 +12,14 @@ function App() {
 
   // fetch data from json server when the page first load
   useEffect(() => {
-    fetch("http://localhost:3001/budget")
+    fetch("http://localhost:3000/budget")
       .then((r) => r.json())
       .then((data) => setBudget(data.total))
       .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3001/expenses")
+    fetch("http://localhost:3000/expenses")
       .then((r) => r.json())
       .then((data) => setExpenses(data))
       .catch((error) => console.log(error));
