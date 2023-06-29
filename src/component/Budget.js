@@ -13,7 +13,7 @@ export default function Budget({ budget, onUpdateBudget }) {
   };
 
   const handleSaveClick = () => {
-    fetch("http://localhost:3000/budget", {
+    fetch(`${process.env.REACT_APP_API_URL}/budget`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

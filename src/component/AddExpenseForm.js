@@ -22,7 +22,7 @@ export default function AddExpenseForm({ onAddExpense }) {
       cost: parseFloat(cost),
     };
 
-    fetch("http://localhost:3000/expenses", {
+    fetch(`${process.env.REACT_APP_API_URL}/expenses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

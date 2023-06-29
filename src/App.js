@@ -16,14 +16,14 @@ function App() {
 
   // fetch data from json server when the page first load
   useEffect(() => {
-    fetch("http://localhost:3000/budget")
+    fetch(`${process.env.REACT_APP_API_URL}/budget`)
       .then((r) => r.json())
       .then((data) => setBudget(data.total))
       .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/expenses")
+    fetch(`${process.env.REACT_APP_API_URL}/expenses`)
       .then((r) => r.json())
       .then((data) => setExpenses(data))
       .catch((error) => console.log(error));

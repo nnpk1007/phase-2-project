@@ -14,7 +14,7 @@ export default function ExpenseItem({ id, title, cost, onDeleteExpense }) {
   };
 
   const handleSaveClick = () => {
-    fetch(`http://localhost:3000/expenses/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/expenses/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function ExpenseItem({ id, title, cost, onDeleteExpense }) {
   };
 
   const handleDeleteClick = () => {
-    fetch(`http://localhost:3000/expenses/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/expenses/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
