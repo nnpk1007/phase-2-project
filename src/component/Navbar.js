@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary mt-2">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand" style={{ fontSize: "30px", color: "purple" }}>
           BudgetWise
         </Link>
         <ul className="nav flex-column">
