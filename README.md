@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# BudgetWise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BudgetWise is a budget management application that helps you track your expenses and keep an eye on your remaining balance. It provides an intuitive interface to manage your budget, add expenses, and monitor your spending.
 
-## Available Scripts
+The project consists of two repositories:
 
-In the project directory, you can run:
+1. [json-server repository](https://github.com/nnpk1007/budget-wise-backend): This repository contains the code for the JSON Server, which serves as the backend for BudgetWise. It handles the storage and retrieval of budget and expense data.
+2. [React app repository](https://github.com/nnpk1007/react-project-budget-wise): This repository contains the code for the React frontend of BudgetWise. It provides the user interface for interacting with the budget and expense data.
 
-### `npm start`
+## Custom Environment Variables
+The React app uses custom environment variables to configure different settings based on the environment (development or production). The following files have been provided:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- env.development: Contains environment variables used for development.
+- env.production: Contains environment variables used for production.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Bootstrap
+The BudgetWise app utilizes the Bootstrap CSS framework for styling and layout. Bootstrap is already included as a dependency in the React app.
 
-### `npm test`
+To customize the styling, refer to the official Bootstrap documentation for guidance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
+To work on BudgetWise locally, follow the steps below:
 
-### `npm run build`
+### Setting up the JSON Server
+1. Clone the [json-server repository](https://github.com/nnpk1007/budget-wise-backend) to your local machine, and change directory into this folder
+2. Install the required dependencies by running the following command : 
+    <pre>
+    npm install
+    </pre>
+3. Start the JSON Server by running the following command:
+    <pre>
+    json-server db.json
+    </pre>
+    This will start the JSON Server on the default port 3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setting up the React App
+1. Clone the [react-project-budget-wise](https://github.com/nnpk1007/react-project-budget-wise) repository to your local machine, and change directory into this folder
+2. Install the required dependencies by running the following command in the repository's root directory:
+    <pre>
+    npm install
+    </pre>
+3. Start the React development server by running the following command:
+    <pre>
+    npm start
+    </pre>
+    This will start the React app in development mode and open it in your default browser. Any changes you make to the code will trigger an automatic reload.
+4. Access the BudgetWise application by visiting [http://localhost:4000](http://localhost:4000) in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Production
+The BudgetWise app is already deployed and accessible using the following link: [https://flatiron-phase-2-project-budget-wise.netlify.app/](https://flatiron-phase-2-project-budget-wise.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the deployed version, simply visit the provided link in your browser.
 
-### `npm run eject`
+## Features
+- View budget, remaining balance, total spent, and list of expenses.
+- Edit the budget amount.
+- Add new expenses, including the title and cost.
+- Edit or delete existing expenses.
+- Real-time updates and calculations based on the budget and expenses.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies Used
+- JSON Server: A simple JSON-based database to store budget and expense data.
+- React: A JavaScript library for building user interfaces.
+- Render: A hosting platform for deploying database (back-end)
+- Netlify: A hosting platform for deploying React applications (front-end).
+- Bootstrap: A CSS framework for styling and layout.
+Feel free to contribute to the project by submitting pull requests or opening issues in the respective repositories.
