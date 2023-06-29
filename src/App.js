@@ -57,7 +57,7 @@ function App() {
       <div className="container">
         <Navbar />
         <div className="container">
-          <div className="row mt-4">
+          <div className="col mt-3">
             <div className="col">
               <Budget budget={budget} onUpdateBudget={handleUpdateBudget} />
             </div>
@@ -69,7 +69,7 @@ function App() {
             </div>
           </div>
         </div>
-        <h3 className="mt-4">Expenses</h3>
+        <h3 className="mt-3">Expenses</h3>
         <div className="row mt-3">
           <div className="col-sm">
             <Switch>
