@@ -47,9 +47,10 @@ To work on BudgetWise locally, follow the steps below:
 4. Access the BudgetWise application by visiting [http://localhost:4000](http://localhost:4000) in your browser.
 
 ## Production
-The BudgetWise app is already deployed and accessible using the following link: [https://flatiron-phase-2-project-budget-wise.netlify.app/](https://flatiron-phase-2-project-budget-wise.netlify.app/)
+- The BudgetWise app is already deployed and accessible using the following link: [https://flatiron-phase-2-project-budget-wise.netlify.app/](https://flatiron-phase-2-project-budget-wise.netlify.app/)
+- The json database is already deployed and accessible using the following link: [https://budget-wise-backend.onrender.com/](https://budget-wise-backend.onrender.com/)
 
-To use the deployed version, simply visit the provided link in your browser.
+### To use the deployed version, simply visit the provided [link](https://flatiron-phase-2-project-budget-wise.netlify.app/) in your browser.
 
 ## Features
 - View budget, remaining balance, total spent, and list of expenses.
