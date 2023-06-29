@@ -25,7 +25,7 @@ export default function Budget({ budget, onUpdateBudget }) {
         onUpdateBudget(newBudget);
       })
       .catch((errror) => {
-        console.log("Error updating budget:", budget);
+        console.log("Error updating budget:", errror);
       });
   };
 
@@ -64,7 +64,7 @@ export default function Budget({ budget, onUpdateBudget }) {
           <span>Budget: ${budget}</span>
           <button
             type="button"
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary btn-sm btn-block"
             onClick={handleEditClick}
           >
             Edit

@@ -37,8 +37,6 @@ function App() {
   // calculate the remaining balance
   const remainingBalance = budget - totalExpenses;
 
-  
-
   const handleUpdateBudget = (newBudget) => {
     setBudget(newBudget);
   };
@@ -58,15 +56,17 @@ function App() {
     <Router>
       <div className="container">
         <Navbar />
-        <div className="row mt-4">
-          <div className="col-sm">
-            <Budget budget={budget} onUpdateBudget={handleUpdateBudget} />
-          </div>
-          <div className="col-sm">
-            <Remaining remainingBalance={remainingBalance} />
-          </div>
-          <div className="col-sm">
-            <Spent totalExpenses={totalExpenses} />
+        <div className="container">
+          <div className="row mt-4">
+            <div className="col">
+              <Budget budget={budget} onUpdateBudget={handleUpdateBudget} />
+            </div>
+            <div className="col">
+              <Remaining remainingBalance={remainingBalance} />
+            </div>
+            <div className="col">
+              <Spent totalExpenses={totalExpenses} />
+            </div>
           </div>
         </div>
         <h3 className="mt-4">Expenses</h3>

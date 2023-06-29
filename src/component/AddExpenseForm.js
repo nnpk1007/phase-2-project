@@ -35,6 +35,7 @@ export default function AddExpenseForm({ onAddExpense }) {
         setTitle("");
         setCost("");
         onAddExpense(data);
+        alert("New expense has been added")
       })
       .catch((error) => console.log(error));
   };
