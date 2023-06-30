@@ -73,10 +73,10 @@ function App() {
         <div className="row mt-3">
           <div className="col-sm">
             <Switch>
-              <Route path="/add-expense">
+              <Route exact path="/add-expense">
                 <AddExpenseForm onAddExpense={handleAddExpense} />
               </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <ExpenseList
                   expenses={expenses}
                   onDeleteExpense={handleDeleteExpense}

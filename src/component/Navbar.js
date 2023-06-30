@@ -1,23 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary mt-2">
       <div className="container">
-        <Link to="/" className="navbar-brand" style={{ fontSize: "30px", color: "purple" }}>
+        <NavLink to="/" exact className="navbar-brand" style={{ fontSize: "30px", color: "purple" }}>
           BudgetWise
-        </Link>
+        </NavLink>
         <ul className="nav flex-column">
           <li className="nav-item active">
-            <Link to="/" className="nav-link">
+            <NavLink to="/" exact className="nav-link" activeStyle={{background:"lightgray"}}>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/add-expense" className="nav-link ">
+            <NavLink to="/add-expense" exact className="nav-link " activeStyle={{background:"lightgray"}}>
               Add Expense
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
