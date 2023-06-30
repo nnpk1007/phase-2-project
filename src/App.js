@@ -9,6 +9,7 @@ import Remaining from "./component/Remaining";
 import Spent from "./component/Spent";
 import ExpenseList from "./component/ExpenseList";
 import AddExpenseForm from "./component/AddExpenseForm";
+import NotFoundPage from "./component/NotFoundPage";
 
 function App() {
   const [budget, setBudget] = useState(0);
@@ -81,6 +82,9 @@ function App() {
               </Route>
               <Route exact path="/add-expense">
                 <AddExpenseForm onAddExpense={handleAddExpense} />
+              </Route>
+              <Route>
+                <NotFoundPage />
               </Route>
             </Switch>
           </div>
