@@ -80,6 +80,7 @@ export default function ExpenseItem({ id, title, cost, onDeleteExpense }) {
               Edit
             </button>
             <AiTwotoneDelete
+              type="button"
               size="1.5em"
               onClick={handleDeleteClick}
             ></AiTwotoneDelete>
