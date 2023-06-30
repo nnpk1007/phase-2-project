@@ -2,6 +2,8 @@
 
 BudgetWise is a budget management application that helps you track your expenses and keep an eye on your remaining balance. It provides an intuitive interface to manage your budget, add expenses, and monitor your spending.
 
+![Alt text](image.png)
+
 The project consists of two repositories:
 
 1. [json-server repository](https://github.com/nnpk1007/budget-wise-backend): This repository contains the code for the JSON Server, which serves as the backend for BudgetWise. It handles the storage and retrieval of budget and expense data.
@@ -44,7 +46,7 @@ To work on BudgetWise locally, follow the steps below:
     npm start
     </pre>
     This will start the React app in development mode and open it in your default browser. Any changes you make to the code will trigger an automatic reload.
-4. Access the BudgetWise application by visiting [http://localhost:4000](http://localhost:4000) in your browser.
+4. You can access the BudgetWise application by visiting [http://localhost:4000](http://localhost:4000) in your browser.
 
 ## Production
 - The BudgetWise app is already deployed and accessible using the following link: [https://flatiron-phase-2-project-budget-wise.netlify.app/](https://flatiron-phase-2-project-budget-wise.netlify.app/)
@@ -65,4 +67,5 @@ To work on BudgetWise locally, follow the steps below:
 - Render: A hosting platform for deploying database (back-end)
 - Netlify: A hosting platform for deploying React applications (front-end).
 - Bootstrap: A CSS framework for styling and layout.
+
 Feel free to contribute to the project by submitting pull requests or opening issues in the respective repositories.
