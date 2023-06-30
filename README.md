@@ -2,7 +2,7 @@
 
 BudgetWise is a budget management application that helps you track your expenses and keep an eye on your remaining balance. It provides an intuitive interface to manage your budget, add expenses, and monitor your spending.
 
-![Alt text](image.png)
+![Alt text](image/image.png)
 
 The project consists of two repositories:
 
