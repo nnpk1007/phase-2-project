@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 export default function AddExpenseForm({ onAddExpense }) {
+  const history = useHistory();
+
   const [title, setTitle] = useState("");
   const [cost, setCost] = useState("");
 
@@ -35,7 +38,17 @@ export default function AddExpenseForm({ onAddExpense }) {
         setTitle("");
         setCost("");
         onAddExpense(data);
-        alert("New expense has been added")
+
+        const addMore = window.confirm(
+          "Expense added successfully. Do you want to add another expense?"
+        );
+
+        if (addMore) {
+          // User wants to add another expense, no action needed
+        } else {
+          // User doesn't want to add another expense, navigate back to home page
+          history.push("/home");
+        }
       })
       .catch((error) => console.log(error));
   };
